@@ -6,4 +6,4 @@ tasks:
       sed -n 's/$BACKADD/'"5000-${GITPOD_WORKSPACE_URL##https://}"'/p' Instruction.txt && gp open Instruction.txt && docker-compose up 
 ports:
   - port: 5000
-  - visibility: public
+    visibility: public
