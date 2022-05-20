@@ -1,0 +1,59 @@
+#
+#       AUTHOR - Raman Sailopal
+#
+version: "3"
+services:
+ grafana-test:
+   hostname: grafana-test
+   container_name: grafana-test
+   networks: 
+     - yottanet
+   user: root
+   ports:
+     - 4000:3000
+   image: docker.io/grafana/grafana:main-ubuntu 
+   volumes:
+      - "$PWD/entrypoint:/home/entrypoint"
+   entrypoint: [ "bash", "-c", "/home/entrypoint/entrypoint.sh" ]
+   deploy:
+     resources:
+       limits:
+         cpus: '0.50'
+         memory: 500M
+       reservations: 
+         cpus: '0.25'
+         memory: 250M
+   restart: on-failure:5
+   healthcheck:
+     test: ["CMD", "tail", "/dev/null"]
+     interval: 10m
+ grafanaserver:
+   image: centos:centos7 
+   hostname: grafanaserv
+   container_name: grafanaserv
+   networks: 
+      - yottanet
+   ports:
+      - 5000:5000
+   environment:
+      - FLASK_APP="yottametrics"
+      - FLASK_ENV="development"
+   volumes:
+      - "$PWD/grafanaserv:/home/entrypoint"
+   entrypoint: [ "bash", "-c", "/home/entrypoint/entrypoint.sh" ]
+ yottadb:
+   image: docker.io/yottadb/yottadb-base:latest
+   hostname: yottadb
+   container_name: yottadb
+   networks:
+      - yottanet
+   ports:
+      - 7041:7041
+   volumes:
+      - "$PWD/yottadb:/home/entrypoint"
+   entrypoint: [ "bash", "-c", "/home/entrypoint/entrypoint.sh" ]
+
+
+
+networks:
+    yottanet:
