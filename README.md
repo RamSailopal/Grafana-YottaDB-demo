@@ -2,7 +2,7 @@
 
 A demo of a YottaDB plugin for Grafana in Gitpod
 
-![Alt text](datasource.JPG?raw=true "Data Source")
+![Alt text](data-source.JPG?raw=true "Data Source")
 
 ![Alt text](Grafana-SET.JPG?raw=true "SET metric")
 
