@@ -2,6 +2,8 @@
 
 A demo of a YottaDB plugin for Grafana in Gitpod
 
+![Alt text](Grafana-SET.JPG?raw=true "SET metric")
+
 The demo consists of four components:
 
 **Grafana** - https://grafana.com/
