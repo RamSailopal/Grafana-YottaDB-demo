@@ -2,6 +2,8 @@
 
 A demo of a YottaDB plugin for Grafana in Gitpod
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/RamSailopal/Grafana-YottaDB-demo)
+
 ![Alt text](data-source.JPG?raw=true "Data Source")
 
 ![Alt text](Grafana-SET.JPG?raw=true "SET metric")
