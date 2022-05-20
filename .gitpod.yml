@@ -4,3 +4,6 @@ tasks:
       echo 'TODO: build project'
     command: |
       docker-compose up 
+    ports:
+      - port: 5000
+      - visibility: public
