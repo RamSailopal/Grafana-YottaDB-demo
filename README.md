@@ -13,3 +13,7 @@ The demo consists of four components:
 **The backend Grafana/YottaDB integration server** - https://github.com/RamSailopal/YottaDB-Grafana-Server
 
 **YottaDB** - https://yottadb.com/
+
+A video of the plugin is below:
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/sUF-Hgsrkiw/0.jpg)](https://www.youtube.com/watch?v=sUF-Hgsrkiw)
