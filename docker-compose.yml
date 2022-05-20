@@ -38,6 +38,8 @@ services:
    environment:
       - FLASK_APP="yottametrics"
       - FLASK_ENV="development"
+      - YOTTAADD="yottadb"
+      - YOTTAPORT="7041"
    volumes:
       - "$PWD/grafanaserv:/home/entrypoint"
    entrypoint: [ "bash", "-c", "/home/entrypoint/entrypoint.sh" ]
