@@ -3,11 +3,11 @@ Enter this in the Grafana config.
 1) Wait for the containers to finish initialisation
 2) Open the browser on port 4000.
 3) Click on the "cog" icon.
-4) Click "Data Sources".
-5) "Add a Data Source".
+4) Click "Data sources".
+5) "Add data source".
 6) Scroll to the bottom and select the YottaDB plugin.
 7) Enter "https" for the http/https field.
 8) Enter $BACKADD for the address.
 9) Enter 443 for the port.
-10) Click on the dashboards icon and create a new dashboard
-11) Add a new panel
+10) Click on the dashboards icon and "New Dashboard".
+11) Click Add a new panel.
